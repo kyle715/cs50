@@ -12,7 +12,7 @@ int main(int argc, string argv[]){
     do {
       if (argc != 2){
           printf("Please check input and re-run program\n");
-          return 1;
+          exit(0);
       }
         // changing string input to an interger
       else {
