@@ -12,4 +12,5 @@ int main(void)
         {
             printf("%i minutes is %i bottles of water used\n",n, n * bottles);
         };
+        printf("how interesting")
 }
