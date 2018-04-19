@@ -34,7 +34,7 @@ int main(int argc, string argv[]){
             if(islower(plainText[i]))
             {
                 if((plainText[i] + key) > 122){
-                    printf("%c", (plainText[i] - 26 + key));
+                    printf("%c", (plainText[i] - 26 + key)); // Good, working code. However, this wrap-around only works if it needs to wrap back to A once. If it needs to cirlce around more than once, the code fails. -MD
                 } else {
                     printf("%c", (plainText[i] + key));
                 }}
@@ -51,3 +51,5 @@ int main(int argc, string argv[]){
         // after displaying encrypted text, reprint plain text they input to show difference between the two in this program
     printf("\n Plain Text:%s\n", plainText);
 }
+
+// Better use of spacing and better legibility in this one. Curly braces could still be dropped down on a couple if/else statements -MD

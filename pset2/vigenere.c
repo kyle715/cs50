@@ -49,7 +49,7 @@ int main(int argc, string argv[])
         }
         else if (islower(p[i]))
         {
-            printf("%c", 'a' + (p[i] - 'a' + letterKey) % 26);
+            printf("%c", 'a' + (p[i] - 'a' + letterKey) % 26); //Because of the use of modulo, this code fixes the problem that caesar had with the wrap around. -MD
             j++;
         }
         else
@@ -63,3 +63,5 @@ int main(int argc, string argv[])
 
     return 0;
 }
+
+//Good styling throughout this one. Nice use of comments. Overall, great pset2. -MD
