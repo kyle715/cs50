@@ -10,7 +10,7 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
          printf("Please check input and re-run program\n");
-          exit(0);
+          exit(1);
     }
     else
     {
@@ -31,7 +31,7 @@ int main(int argc, string argv[])
 
     // Get text to encode
     string p = get_string("Please enter text to by encrypted:");
-
+    printf("ciphertext:");
     // Loop through text
     for (int i = 0, j = 0, n = strlen(p); i < n; i++)
     {
