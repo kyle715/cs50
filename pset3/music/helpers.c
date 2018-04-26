@@ -1,3 +1,10 @@
+/**
+ * (EMITON)
+ * Overall great program
+ * Cliff mentioned something about possibly getting a whole number like '1' instead of just '1/2'
+ * so you might want to add that update to your duration, but aside from that I like the format.
+ **/
+
 // Helper functions for music
 #include <stdio.h>
 #include <cs50.h>
@@ -12,6 +19,7 @@ int duration(string fraction)
 {
     int x = atoi(&fraction[0]);
     int y = atoi(&fraction[2]);
+    //(EMITON) very succint, one liners are the best. But it might be a little cryptic
     int eigths = (8/y)*x;
     return eigths;
 }
@@ -20,6 +28,8 @@ int duration(string fraction)
 int frequency(string note)
 {
     float semitone = 0.0, currentOctave;
+    //(EMITON) Why did you use the '\0' to initialize the characters?
+    //(EMITON) Will affect anything? Is this best practice?
     char currentNote = '\0', accidental = '\0';
     if (strlen(note) == 2)
     {
@@ -37,6 +47,7 @@ int frequency(string note)
         return 1;
     }
 
+    //(EMITON) I know that hard numbers are usually looked down upon, but I like the implemnation in your switch statement
     switch (currentNote)
     {
         case 'C':
@@ -67,6 +78,8 @@ int frequency(string note)
             break;
     }
 
+    //(EMITON) I like how you break down the 'NOA' into three parts
+    //(EMITON) First Note, then Accidental, then Octave
     if (accidental == '#')
     {
         semitone += 1.0;
@@ -77,6 +90,7 @@ int frequency(string note)
         semitone -= 1.0;
     }
 
+    //(EMITON) Another one liner, nice!
     semitone += (currentOctave - 4.0) * 12.0;
 
     return round(pow(2.0, semitone / 12.0) * 440.0);
