@@ -53,7 +53,7 @@ bool load(const char* dictionary)
        return false;
 
    // Create an array for word to be stored
-//   char word[LENGTH+1];
+  char word[LENGTH+1];
 
    // Scan through file, loading each word into hash table
    while (fscanf(file, "%s\n", word) != EOF)
